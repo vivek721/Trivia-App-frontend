@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="d-flex justify-content-center h-200">
+    <div class="card">
+      <div class="card-header">
+        <h3>Please Enter Your Name</h3>
+      </div>
+      <div class="card-body">
+        <input type="name" [(ngModel)]="userName" name="userName" #userName1="ngModel" class="form-control"
+          placeholder="Enter Name" />
+      </div>
+      <div class="card-footer d-flex justify-content-center">
+        <button type="button" class="btn btn-outline-primary" (click)="submitName()"
+          [routerLink]="[ '/quiz' ]">Continue</button>
+        <button type="button" class="btn btn-outline-secondary" style="margin-left: 10px" (click)="submitName()"
+          [routerLink]="[ '/history' ]">History</button>
+      </div>
+    </div>
+  </div>
+</div>

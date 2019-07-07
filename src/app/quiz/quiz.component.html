@@ -1,0 +1,31 @@
+<h3 style="text-align: center">Welcome {{userName}}</h3>
+<div class="card">
+  <ul>
+    Q: {{question}}
+  </ul>
+  <ul *ngFor="let opt of option">
+    <div *ngIf="answerType=='single'">
+      <div class="radio">
+        <label>
+          <input type="radio" name="radAnswer" (click)="check($event,opt)">
+          {{opt}}
+        </label>
+      </div>
+    </div>
+    <div *ngIf="answerType=='multiple'">
+      <div class="checkbox">
+        <label>
+          <input type="checkbox" (click)="check($event,opt)">
+          {{opt}}
+        </label>
+      </div>
+    </div>
+  </ul>
+  <div class="card-footer">
+    <button class="btn btn-outline-secondary btn-lg" (click)="previous()" *ngIf="i>0">previous</button>
+    <button class="btn btn-outline-secondary btn-lg" (click)="next()" *ngIf="i<quizlength-1">next</button>
+    <button class="btn btn-outline-success btn-lg" (click)="submit()" *ngIf="i>0"
+      [routerLink]="[ '/summary' ]">submit</button>
+  </div>
+
+</div>

@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center flex-row bd-highlight ">
+  <div class="card" style="width: 55rem;height:20rem;text-align: center">
+    <div class="card-body" *ngIf="userName">
+      <h5 class="card-title">Hello {{userName}}</h5>
+      <p class="card-text">Here are the answers selected: </p>
+    </div>
+    <div class="card-body">
+      <div *ngFor="let question of questions">
+        Q: {{question.question}} <br>
+        A: {{question.answer}}
+      </div><br><br>
+      <button class="btn btn-outline-warning btn-lg" [routerLink]="[ '/home' ]">Finish</button>
+      <button class="btn btn-outline-success btn-lg" [routerLink]="[ '/history' ]">History</button>
+    </div>
+  </div>
+</div>

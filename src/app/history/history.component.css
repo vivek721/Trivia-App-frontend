@@ -1,0 +1,11 @@
+.card {
+  background-color: rgba(177, 162, 162, 0.5)
+}
+
+.card-header {
+  font-weight: bold
+}
+
+button {
+  margin-bottom: 20px;
+}
